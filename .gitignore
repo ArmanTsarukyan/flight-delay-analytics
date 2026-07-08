@@ -1,0 +1,26 @@
+# Datos crudos (pesados, no se versionan)
+data/raw/*
+!data/raw/.gitkeep
+
+# Datos procesados grandes (opcional: descomenta si pesan mucho)
+# data/processed/*
+# !data/processed/.gitkeep
+
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
