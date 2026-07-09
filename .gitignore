@@ -2,9 +2,13 @@
 data/raw/*
 !data/raw/.gitkeep
 
-# Datos procesados grandes (opcional: descomenta si pesan mucho)
-# data/processed/*
-# !data/processed/.gitkeep
+# Datos procesados grandes
+data/processed/flights_with_weather.csv
+data/processed/weather_download_log.csv
+!data/processed/.gitkeep
+
+# BTS combinado (980 MB)
+data/ontime_2024_completo.csv
 
 # Entorno virtual
 venv/
