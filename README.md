@@ -15,6 +15,7 @@ What factors best predict operational flight delays? An integrated exploratory a
 
 - **Period:** full 2024 calendar year (to capture real seasonality).
 - **Airports:** the 30 highest-traffic airports in the U.S.
+- **Filtering:** flights departing from a top-30 airport (regardless of destination), since delay is measured at origin. Destination weather is available for 55.8% of rows (see `data/README.md` and notebook Section 1.2–1.3 for full rationale).
 - **BTS columns used:**
   - Time: `FlightDate`, `Year`, `Month`, `DayofMonth`, `DayOfWeek`
   - Airline: `Reporting_Airline`
@@ -64,7 +65,7 @@ streamlit run dashboard/app.py
 
 ## Project Status
 
-- [ ] Week 1 — Data acquisition and integration (BTS + NOAA)
+- [x] Week 1 — Data acquisition and integration (BTS + NOAA)
 - [ ] Week 2 — Integrated exploratory data analysis (EDA)
 - [ ] Week 3 — Deployed dashboard + case study
 
