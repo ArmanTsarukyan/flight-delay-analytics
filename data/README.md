@@ -11,8 +11,9 @@ Original data, exactly as downloaded from the source:
 ## `processed/`
 Clean, merged data, ready for the analysis notebook and dashboard:
 
-- Result of merging BTS + NOAA by airport + date (and time, if applicable).
-- Document here (or in the notebook) any cleaning decisions: dropped rows, airports without weather coverage, timezone handling.
+- **`flights_with_weather.parquet`** — main analytical dataset. Result of merging BTS + NOAA by airport + date, then deduplicating both weather (ASOS corrective reports) and BTS (duplicate flight identifiers). ~4.6M rows × 47 columns. **Load with `pd.read_parquet()`**.
+- **`top30_airports.csv`** — airport reference table (IATA, traffic rank, ICAO, timezone).
+- **`weather_download_log.csv`** — download status per station.
 
 ## Airports Included (top 30 by traffic, U.S.)
 
@@ -36,5 +37,5 @@ Section 1.2 for the exact coverage percentage).
   hour; deduplicated by keeping the earliest observation per (station, hour)
   before merging, to avoid row fan-out.
 - ~1,044 BTS records show duplicate flight identifiers with differing delay
-  values (likely schedule changes) — flagged for investigation in Section 2,
-  not treated as a merge artifact.
+  values (likely schedule changes) — **removed** in Section 2 before saving the
+  final Parquet file. See notebook for subset columns used.
