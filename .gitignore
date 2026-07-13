@@ -4,6 +4,7 @@ data/raw/*
 
 # Datos procesados grandes
 data/processed/flights_with_weather.csv
+data/processed/flights_with_weather.parquet
 data/processed/weather_download_log.csv
 !data/processed/.gitkeep
 
