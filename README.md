@@ -66,7 +66,7 @@ streamlit run dashboard/app.py
 ## Project Status
 
 - [x] Week 1 — Data acquisition and integration (BTS + NOAA)
-- [ ] Week 2 — Integrated exploratory data analysis (EDA)
+- [x] Week 2 — Integrated exploratory data analysis (EDA)
 - [ ] Week 3 — Deployed dashboard + case study
 
 ## Case Study
